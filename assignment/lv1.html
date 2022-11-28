@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/1.2.0/axios.js"></script>
+<body>
+    <button>发送请求</button>
+  <script> 
+
+    
+const btn =document.querySelector("button")
+btn.addEventListener("click",async()=>{
+        const res1 = await fetch("https://taskapi.chovrio.club/poetry/21",{
+    method :"get",
+    
+})
+const data1 = await res1.json()
+console.log(data1)
+
+const res2 = await fetch("https://taskapi.chovrio.club/poetry?title=元日",{
+    method :"get",
+    
+})
+const data2 = await res2.json()
+console.log(data2)
+    
+})
+
+</script> 
+</body>
+</html>
